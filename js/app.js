@@ -35,7 +35,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let total = a * b;
   let result = [total, `The product of ${a} and ${b} is ${total}.`];
-  return result;
+  return result; 
+  
 }
 
 //let result =multiply(5,9);
