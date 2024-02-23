@@ -15,8 +15,6 @@ function sum(a, b) { //eslint-disable-line
 }
 
 let result = sum(4, 7);
-console.log(result);
-
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -86,12 +84,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let arraySum = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+  let result = [arraySum, `${sumArr.join(',')} was passed in as an array of numbers, and ${arraySum} is their sum.`];
+  return result;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
